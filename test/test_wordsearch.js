@@ -35,4 +35,16 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return false if the word matrix is an empty array", function() {
+    const result = wordSearch([], 'SEINFELD');
+
+    assert.isFalse(result);
+  });
+
+  it("should return true if the word with an empty string is present", function() {
+    const result = wordSearch([], '');
+
+    assert.isTrue(result);
+  });
 });
